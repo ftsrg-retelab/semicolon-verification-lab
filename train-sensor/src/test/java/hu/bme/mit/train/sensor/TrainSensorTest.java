@@ -42,6 +42,11 @@ public class TrainSensorTest {
 
     @Test
     public void userSetAlarmBackToFalseTest(){
+        when(controller.getReferenceSpeed()).thenReturn(10);
+
+        sensor.overrideSpeedLimit(-2);
+        verify(user, times(1)).setAlarmState(true);
+
         when(user.getAlarmState()).thenReturn(true);
         sensor.overrideSpeedLimit(6);
         verify(user, times(1)).setAlarmState(false);
