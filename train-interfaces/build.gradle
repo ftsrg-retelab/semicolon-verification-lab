@@ -1,2 +1,6 @@
+plugins {
+    id "org.sonarqube" version "2.2"
+}
+
 dependencies {
 }
