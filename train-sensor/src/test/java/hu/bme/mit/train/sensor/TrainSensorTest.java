@@ -16,6 +16,8 @@ public class TrainSensorTest {
     TrainController controller;
     TrainUser user;
 
+    ///
+
     @Before
     public void before() {
         controller = mock(TrainControllerImpl.class);
